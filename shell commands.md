@@ -7,13 +7,20 @@
 ```sql 
 connect root@localhost
 ```
+
 ## toon databases
 ```sql
 show databases
 ```
+
 ## gebruik database 
 ```
 use bib
 ```
-*bib: is de naam van de database
-## 
+*bib: is de naam van de database*
+
+## toon tabellen
+```
+show tables
+```
+
