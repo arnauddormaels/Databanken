@@ -13,6 +13,10 @@ connect root@localhost
 source "D:\Graduaat\Databanken I\bib-import.sql"
 ```
 
+## database verwijderen
+```sql
+drop database bib
+```
 ## toon databases
 ```sql
 show databases
