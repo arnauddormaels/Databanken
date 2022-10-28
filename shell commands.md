@@ -8,6 +8,10 @@
 connect root@localhost
 ```
 
+## database importen
+```sql
+source "D:\Graduaat\Databanken I\bib-import.sql"
+
 ## toon databases
 ```sql
 show databases
