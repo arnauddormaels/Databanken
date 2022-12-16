@@ -5,7 +5,7 @@
 
 ## verbinden met root
 ```sql 
-connect root@localhost
+\connect root@localhost
 ```
 
 ## database importen
