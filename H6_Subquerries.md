@@ -19,4 +19,4 @@ FROM producten
 WHERE leverancierId IN (SELECT naam FROM leveranciers WHERE naam = "B*") 
 ``` 
 Hierbij gaat de subquerrie meerdere resultaten teruggeven dus moeten we IN gebruiken ipv "="  
-Er kan ook gebruikt gemaakt worden van ```NOT IN``` ipv IN 
+```SQL NOT IN ``` kan ook gebruikt worden voor het omgekeerde effect te verkrijgen van IN
