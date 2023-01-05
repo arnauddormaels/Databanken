@@ -40,3 +40,15 @@ where SALARY   >  ALL  (   select SALARY
 		from employees 
 		where DEPARTMENT_ID = 80 )  ;
 ```
+  
+    
+## EXISTS And NOT EXISTS
+
+```sql
+select *
+from departments
+where EXISTS     ( SELECT *
+		from employees
+                		where salary > 11000 	
+		    and employees.department_id = departments.department_id )  ;
+```
