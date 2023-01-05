@@ -33,3 +33,10 @@ Deze kunnen enkel gebruikt worden als de subquerry 1 resultaat returned.
 Maar je kan ook gebruik maken van ALL, ANY en SOM in combinatie met bovenstaande operatoren.  
 ``All`` -> Tonen waneer de waarde groter is dan **ELKE** waarde in de subquerry.  
 ``ANY`` (``SOME``) -> Tonen waneer de waarde groter is dan **één** waarde in subquerry.  
+```sql
+select LAST_NAME, FIRST_NAME, DEPARTMENT_ID, SALARY 
+from employees
+where SALARY   >  ALL  (   select SALARY
+		from employees 
+		where DEPARTMENT_ID = 80 )  ;
+```
