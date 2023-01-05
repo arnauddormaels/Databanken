@@ -18,4 +18,5 @@ SELECT *
 FROM producten
 WHERE leverancierId IN (SELECT naam FROM leveranciers WHERE naam = "B*") 
 ``` 
-Hierbij gaat de subquerrie meerdere resultaten teruggeven dus moeten we IN gebruiken ipv "="
+Hierbij gaat de subquerrie meerdere resultaten teruggeven dus moeten we IN gebruiken ipv "="  
+Er kan ook gebruikt gemaakt worden van ```NOT IN``` ipv IN 
