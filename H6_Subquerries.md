@@ -18,18 +18,18 @@ SELECT *
 FROM producten
 WHERE leverancierId IN (SELECT naam FROM leveranciers WHERE naam = "B*") 
 ``` 
-Hierbij gaat de subquerrie meerdere resultaten teruggeven dus moeten we IN gebruiken ipv "="  
+Hierbij gaat de subquerrie meerdere resultaten teruggeven dus moeten we IN gebruiken ipv "=".    
 ```sql
 SELECT * 
 FROM producten
 WHERE leverancierId NOT IN (SELECT naam FROM leveranciers WHERE naam = "B*") 
 ```
-kan ook gebruikt worden voor het omgekeerde effect te verkrijgen van IN
+kan ook gebruikt worden voor het omgekeerde effect te verkrijgen van IN.  
 ``!`` Er mag maar in kolom geselecteerd worden in de subquerry
 
 ## ALL, ANY en SOM
-In de where clause kan er ook gebruikt worden van <,<=,<>,>=,>  
-Deze kunnen enkel gebruikt worden als de subquerry 1 resultaat returned  
-Maar je kan ook gebruik maken van ALL, ANY en SOM in combinatie met bovenstaande operatoren
-``All`` -> Tonen waneer de waarde groter is dan **ELKE** waarde in de subquerry   
-``ANY`` (``SOME``) -> Tonen waneer de waarde groter is dan **één** waarde in subquerry
+In de where clause kan er ook gebruikt worden van <,<=,<>,>=,>.  
+Deze kunnen enkel gebruikt worden als de subquerry 1 resultaat returned.  
+Maar je kan ook gebruik maken van ALL, ANY en SOM in combinatie met bovenstaande operatoren.  
+``All`` -> Tonen waneer de waarde groter is dan **ELKE** waarde in de subquerry.  
+``ANY`` (``SOME``) -> Tonen waneer de waarde groter is dan **één** waarde in subquerry.  
