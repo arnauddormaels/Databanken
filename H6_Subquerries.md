@@ -31,5 +31,5 @@ kan ook gebruikt worden voor het omgekeerde effect te verkrijgen van IN
 In de where clause kan er ook gebruikt worden van <,<=,<>,>=,>  
 Deze kunnen enkel gebruikt worden als de subquerry 1 resultaat returned  
 Maar je kan ook gebruik maken van ALL, ANY en SOM in combinatie met bovenstaande operatoren
-All -> Tonen waneer de waarde groter is dan **ELKE** waarde in de subquerry   
-ANY (SOME) -> Tonen waneer de waarde groter is dan **één** waarde in subquerry
+``All`` -> Tonen waneer de waarde groter is dan **ELKE** waarde in de subquerry   
+``ANY`` (``SOME``) -> Tonen waneer de waarde groter is dan **één** waarde in subquerry
