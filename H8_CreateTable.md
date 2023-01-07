@@ -43,4 +43,20 @@ enkel tijd
 ## DATETIME 
 datum en tijd
 
+## CONSTRAINTS
+constraints zijn regels dat we toevoegen aan de databank op table niveau. Tot nu waren we enkel nog maar gewoon om regels toe te voegen op column niveau. Zoals in het bovenste script. Nu gaan we de PRIMARY KEYS ergens anders definieëen.
+De meest gebruikte constraints zijn NOT NULL, PRIMARY KEY, FOREIGN KEY, UNIQUE en CHECK()
+**Not null kan niet gebruikt worden op column niveau.
+
+```sql 
+CREATE TABLE products (
+id INT,
+naam VARCHAR(50),
+leveranciers_id INT,
+CONSTRAINT boeken_pk PRIMARY KEY (id),
+CONSTRAINT naam CHECK (length(naam) > 4),
+FOREIGN KEY (leveranciers_id) REFERENCES leveranciers(id) 
+);
+```
+
 
