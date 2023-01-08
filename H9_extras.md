@@ -33,6 +33,33 @@ IGNORE 1 ROWS;
 ```
 ## Triggers
 ```sql 
-
+delimiter 
+CREATE TRIGGER upd_check BEFORE UPDATE ON products
+FOR EACH ROW 
+BEGIN 
+  IF NEW.prijs < 0 THEN
+    SET NEW.prijs = 0;
+  ELSEIF NEW.prijs > 100 THEN 
+    SET NET.prijs = 100;
+  END IF;
+END;
+delimeter;
 
 ```
+
+## Stored procedures en functions 
+Een stored procedure is een stukkje code dat je op een andere plaats kan aanroepen.
+```sql
+delimeter 
+CREATE PROCEDURE productenPerLeverancier (IN leverancier_id INT, OUT aantal_productenPerLeverancier INT)
+BEGIN
+SELECT COUNT(*) INTO aantal_productenPerLeverancier 
+FROM producten 
+GROUP BY leverancier_id
+END 
+delimiter;
+```
+
+Call van een stored procedure 
+```sql
+productenPerLeverancier(5, @aantal);
