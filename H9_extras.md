@@ -62,4 +62,4 @@ delimiter;
 
 Call van een stored procedure 
 ```sql
-productenPerLeverancier(5, @aantal);
+CALL productenPerLeverancier(5, @aantal);
